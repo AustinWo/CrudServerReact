@@ -40,6 +40,27 @@ router.get('/', function(req, res){
     res.json({ message: 'Hey Austin! Yaaas'});
 });
 
+router.route('/users')
+    .post(function(req, res){
+        console.log(req.body);
+        var user = new User();
+        user.name = req.body.name;
+        user.username = req.body.username;
+        user.password = req.body.password;
+
+        user.save(function(err){
+            if (err) {
+                if (err.code === 11000) {
+                    return res.send({ success: false, message: 'A user with that username already exists.'});
+                } else {
+                    return res.send(err);
+                }
+            }
+            res.send({ message: 'User created!' });
+        });
+    });
+
+
 
 
 app.listen(port);
