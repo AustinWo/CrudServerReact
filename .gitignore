@@ -1,0 +1,7 @@
+Config.js
+node_modules
+.DS_Store
+.idea
+client/lib
+bower_components
+config.js
