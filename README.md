@@ -1,9 +1,10 @@
 # CRUD Server
 
-## Node.js
-## Express
-## MongoDB
-## Mongoose
+> Built with
+- Node.js
+- Express
+- MongoDB
+- Mongoose
 
 
 ### Installation
